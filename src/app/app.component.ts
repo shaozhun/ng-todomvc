@@ -42,4 +42,14 @@ export class AppComponent {
     })
     e.target.value = ''  //清除文本框
   }
+  removeTodo(index: number) {
+    this.todos.splice(index, 1)
+  }
+  get toggleAll() {
+    return this.todos.every(t => t.done)
+  }
+
+  set toggleAll(val) {
+    this.todos.forEach(t => t.done = val)
+  }
 }

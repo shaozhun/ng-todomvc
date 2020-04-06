@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { FooComponent } from './foo/foo.component';
@@ -11,7 +12,8 @@ import { FooComponent } from './foo/foo.component';
     FooComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] //指定启动组件，指定哪个模块为入口
